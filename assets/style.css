@@ -12,6 +12,8 @@
   --default-padding-width: 25px;
   --logo-color: 46deg, rgba(103, 103, 103, 1), rgba(0, 0, 0, 1);
   --background-color: 229deg, rgba(255, 255, 255, 1), rgba(134, 134, 134, 1);
+  --default-button-color: #505050;
+  --hover-button-color: #fff;
 }
 
 body {
@@ -31,7 +33,7 @@ body {
 }
 
 img, i.bx {
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 /* 
@@ -46,6 +48,34 @@ img, i.bx {
     transition: color .5s ease;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  transition: all 1s ease;
+  width: auto;
+  padding: 5px;
+  margin: 20px;
+  background: var(--default-button-color);
+  border: 1px solid var(--default-button-color);
+  border-radius: 5px;
+  color: var(--hover-button-color);
+
+  /* 選択禁止 */
+  user-select: none;
+  -moz-user-select: none;     /* Mozilla */
+  -webkit-user-select: none;  /* Webkit */
+  -ms-user-select: none;      /* Microsoft */
+
+  &:hover {
+    background: var(--hover-button-color);
+    color: var(--default-button-color);
+  }
+
+  i.bx {
+    font-size: x-large;
   }
 }
 
@@ -96,7 +126,16 @@ main {
   padding: var(--default-padding-height) var(--default-padding-width);
 
   .info {
-    font-family: monospace;
+    margin: 20px;
+
+    .text {
+      font-size: xx-large;
+      font-family: monospace;
+    }
+    
+    .button {
+      font-size: x-large;
+    }
   }
 }
 
