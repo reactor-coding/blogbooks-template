@@ -1,25 +1,112 @@
+@charset "utf-8";
+
+/* 
+  初期設定
+  - 引数
+  - 画像の位置
+  - その他(bodyなど)
+ */
+
 :root {
-  --default-padding: 10px;
+  --default-padding-height: 15px;
+  --default-padding-width: 25px;
+  --logo-color: 46deg, rgba(103, 103, 103, 1), rgba(0, 0, 0, 1);
+  --background-color: 229deg, rgba(255, 255, 255, 1), rgba(134, 134, 134, 1);
 }
 
-html, body {
+body {
+  /* background: url(https://blogbooks.net/wp-content/uploads/2023/07/cropped-nong-qwvv5QD0It0-unsplash.jpg); */
+  background: linear-gradient(var(--background-color));
+  background: -webkit-linear-gradient(var(--background-color));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  font-size: 15px;
 }
 
+img, i.bx {
+  vertical-align: bottom;
+}
+
+/* 
+  パーツ
+  - リンクアニメーション
+  - 選択不可要素
+ */
+
+.link {
+
+  &:hover {
+    transition: color .5s ease;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.no-select {
+  user-select: none;
+  -moz-user-select: none;     /* Mozilla */
+  -webkit-user-select: none;  /* Webkit */
+  -ms-user-select: none;      /* Microsoft */
+}
+
+/* 
+  ページごとの設定
+  - nextjs でここから上のスタイルだけ globals.css に入れておく
+ */
+
+/* header */
 header {
-  display: flex;
-  padding: var(--default-padding);
+  padding: var(--default-padding-height) var(--default-padding-width);
   font-size: large;
-  width: 100%;
   height: 15%;
 
+  /* float解除 */
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  /* Logo - 左寄せ */
   .logo {
     float: left;
+    background: -webkit-linear-gradient(var(--logo-color));
+    background: linear-gradient(var(--logo-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
+  /* menu icon - 右寄せ */
   .menu {
     float: right;
+    padding: 0;
+    font-size: x-large;
+  }
+}
+
+main {
+  padding: var(--default-padding-height) var(--default-padding-width);
+
+  .info {
+    font-family: monospace;
+  }
+}
+
+footer {
+  padding: calc(var(--default-padding-height) * 2) var(--default-padding-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .copyright {
+    margin: 0 0 0 auto;
   }
 }
