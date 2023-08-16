@@ -137,9 +137,14 @@ main {
       -webkit-text-fill-color: transparent;
       margin: 5px;
     }
-    
-    .button {
-      font-size: x-large;
+
+    img {
+      position: absolute;
+      width: auto;
+      height: 30vh;
+      left: auto;
+      right: calc(var(--default-padding-width) + 40px);
+      display: none;
     }
   }
 }
