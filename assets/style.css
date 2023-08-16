@@ -138,13 +138,14 @@ main {
       margin: 5px;
     }
 
-    img {
+    .mainvisual {
       position: absolute;
-      width: auto;
-      height: 30vh;
+      z-index: 0;
+      width: 30vw;
+      height: 80vh;
+      top: calc(var(--default-padding-height) * 4);
       left: auto;
-      right: calc(var(--default-padding-width) + 40px);
-      display: none;
+      right: 400px;
     }
   }
 }
@@ -166,5 +167,17 @@ footer {
 
   .copyright {
     margin: 0 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  main .info {
+    .text br {
+      display: none;
+    }
+
+    .mainvisual {
+      display: none;
+    }
   }
 }
