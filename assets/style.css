@@ -68,6 +68,14 @@ img, i.bx {
   -ms-user-select: none;      /* Microsoft */
 }
 
+div.gradation {
+  background:         linear-gradient(var(--logo-color));
+  background: -webkit-linear-gradient(var(--logo-color));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* 
   ページごとの設定
   - nextjs でここから上のスタイルだけ globals.css に入れておく
@@ -77,7 +85,7 @@ img, i.bx {
 header {
   padding: var(--default-padding-height) var(--default-padding-width);
   font-size: large;
-  height: 15%;
+  height: 10vh;
 
   /* float解除 */
   &::after {
@@ -89,8 +97,7 @@ header {
   /* Logo - 左寄せ */
   .logo {
     float: left;
-    background:         linear-gradient(var(--logo-color));
-    background: -webkit-linear-gradient(var(--logo-color));
+    background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -108,11 +115,26 @@ main {
   padding: var(--default-padding-height) var(--default-padding-width);
 
   .info {
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 40px;
+    height: calc(100vh - 10vh - var(--default-padding-height));
+
+    .title {
+      background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: xx-large;
+    }
 
     .text {
-      font-size: xx-large;
-      font-family: monospace;
+      background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 5px;
     }
     
     .button {
