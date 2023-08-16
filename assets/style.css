@@ -141,11 +141,10 @@ main {
     .mainvisual {
       position: absolute;
       z-index: 0;
-      width: 30vw;
-      height: 80vh;
+      width: auto;
       top: calc(var(--default-padding-height) * 4);
       left: auto;
-      right: 400px;
+      right: -400px;
     }
   }
 }
