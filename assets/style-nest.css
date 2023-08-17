@@ -147,7 +147,7 @@ main {
       height: 100vh;
       width: auto;
       top: calc(var(--default-padding-height) * 5);
-      left: 60vw;
+      left: 50vw;
       right: auto;
       /* 
         border-radiusが効かない場合の原因と対処法を解説！
