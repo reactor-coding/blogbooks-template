@@ -146,6 +146,10 @@ main .info .mainvisual {
   overflow: hidden;
   border-radius: 10px;
 }
+main .info .mainvisual img {
+  height: 100%;
+  width: 100%;
+}
 
 footer {
   padding: calc(var(--default-padding-height) * 2) var(--default-padding-width);
