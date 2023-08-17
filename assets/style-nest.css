@@ -189,7 +189,7 @@ footer {
 
     .mainvisual {
       left: 10vh;
-      display: none;
+      /* display: none; */
     }
   }
 }
