@@ -141,7 +141,7 @@ main {
     .mainvisual {
       box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5) /* rgba(0, 0, 0, 0.3) */;
       position: absolute;
-      z-index: 0;
+      z-index: -1;
       width: auto;
       top: calc(var(--default-padding-height) * 5);
       left: auto;
