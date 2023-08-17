@@ -135,7 +135,6 @@ main .info .mainvisual {
   position: absolute;
   z-index: -1;
   height: 100vh;
-  width: auto;
   top: calc(var(--default-padding-height) * 5);
   left: 50vw;
   right: auto;
@@ -148,7 +147,6 @@ main .info .mainvisual {
 }
 main .info .mainvisual img {
   height: 100%;
-  width: 100%;
 }
 
 footer {
