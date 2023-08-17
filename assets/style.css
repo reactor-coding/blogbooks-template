@@ -131,7 +131,7 @@ main .info .text {
 main .info .mainvisual {
   box-shadow: -10px 10px 25px #fff;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   width: auto;
   top: calc(var(--default-padding-height) * 5);
   left: auto;
