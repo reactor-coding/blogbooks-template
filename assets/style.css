@@ -1,12 +1,15 @@
-@charset "utf-8";
+/**
+  nest非対応ブラウザにも対応させるため Sassコンパイルしました。
+  https://www.sassmeister.com/
+ */
 
+@charset "UTF-8";
 /* 
   初期設定
   - 引数
   - 画像の位置
   - その他(bodyなど)
  */
-
 :root {
   --default-padding-height: 15px;
   --default-padding-width: 25px;
@@ -18,7 +21,7 @@
 
 body {
   /* background: url(https://blogbooks.net/wp-content/uploads/2023/07/cropped-nong-qwvv5QD0It0-unsplash.jpg); */
-  background:         linear-gradient(var(--background-color));
+  background: linear-gradient(var(--background-color));
   background: -webkit-linear-gradient(var(--background-color));
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -42,11 +45,10 @@ img, i.bx {
   - リンクアニメーション
   - 選択不可要素
  */
-
 .link:hover {
-    transition: color .5s ease;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.3);
+  transition: color 0.5s ease;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .button {
@@ -54,23 +56,25 @@ img, i.bx {
   border: 1px solid #fff; */
   color: var(--default-button-color);
 }
-
 .button i.bx {
   font-size: x-large;
 }
 
 .no-select {
   user-select: none;
-  -moz-user-select: none;     /* Mozilla */
-  -webkit-user-select: none;  /* Webkit */
-  -ms-user-select: none;      /* Microsoft */
+  -moz-user-select: none;
+  /* Mozilla */
+  -webkit-user-select: none;
+  /* Webkit */
+  -ms-user-select: none;
+  /* Microsoft */
 }
 
 div.gradation {
-  background:         linear-gradient(var(--logo-color));
+  background: linear-gradient(var(--logo-color));
   background: -webkit-linear-gradient(var(--logo-color));
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -78,31 +82,27 @@ div.gradation {
   ページごとの設定
   - nextjs でここから上のスタイルだけ globals.css に入れておく
  */
-
 /* header */
 header {
   padding: var(--default-padding-height) var(--default-padding-width);
   font-size: large;
   height: 10vh;
+  /* float解除 */
+  /* Logo - 左寄せ */
+  /* menu icon - 右寄せ */
 }
-
-/* float解除 */
 header::after {
   content: "";
   display: block;
   clear: both;
 }
-  
-/* Logo - 左寄せ */
 header .logo {
   float: left;
   background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-  /* menu icon - 右寄せ */
 header .menu {
   float: right;
   padding: 0;
@@ -161,6 +161,9 @@ footer .copyright {
 }
 
 @media screen and (max-width: 960px) {
+  main .info {
+    margin: 10px;
+  }
   main .info .text br {
     display: none;
   }

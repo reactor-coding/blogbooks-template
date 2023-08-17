@@ -171,6 +171,8 @@ footer {
 
 @media screen and (max-width: 960px) {
   main .info {
+    margin: 10px;
+
     .text br {
       display: none;
     }
