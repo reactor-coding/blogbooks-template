@@ -144,10 +144,11 @@ main {
       box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5) /* rgba(0, 0, 0, 0.3) */;
       position: absolute;
       z-index: -1;
+      height: 100vh;
       width: auto;
       top: calc(var(--default-padding-height) * 5);
-      left: auto;
-      right: -300px;
+      left: 60vw;
+      right: auto;
       /* 
         border-radiusが効かない場合の原因と対処法を解説！
         https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
@@ -187,6 +188,7 @@ footer {
     }
 
     .mainvisual {
+      left: 10vh;
       display: none;
     }
   }

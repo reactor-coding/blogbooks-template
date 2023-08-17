@@ -115,6 +115,7 @@ main .info {
   height: calc(100vh - 10vh - var(--default-padding-height));
 }
 main .info .title {
+  position: relative;
   background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
   -webkit-background-clip: text;
   background-clip: text;
@@ -122,6 +123,7 @@ main .info .title {
   font-size: xx-large;
 }
 main .info .text {
+  position: relative;
   background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
   -webkit-background-clip: text;
   background-clip: text;
@@ -129,13 +131,14 @@ main .info .text {
   margin: 5px;
 }
 main .info .mainvisual {
-  box-shadow: -10px 10px 25px #fff;
+  box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: -1;
+  height: 100vh;
   width: auto;
   top: calc(var(--default-padding-height) * 5);
-  left: auto;
-  right: -300px;
+  left: 60vw;
+  right: auto;
   /* 
     border-radiusが効かない場合の原因と対処法を解説！
     https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
@@ -170,6 +173,7 @@ footer .copyright {
     display: none;
   }
   main .info .mainvisual {
+    left: 10vh;
     display: none;
   }
 }
