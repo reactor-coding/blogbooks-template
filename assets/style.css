@@ -142,7 +142,7 @@ main {
       position: absolute;
       z-index: 0;
       width: auto;
-      top: calc(var(--default-padding-height) * 4);
+      top: calc(var(--default-padding-height) * 5);
       left: auto;
       right: -400px;
     }
