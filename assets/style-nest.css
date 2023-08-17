@@ -123,6 +123,7 @@ main {
     height: calc(100vh - 10vh - var(--default-padding-height));
 
     .title {
+      position: relative;
       background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
       -webkit-background-clip: text;
               background-clip: text;
@@ -131,6 +132,7 @@ main {
     }
 
     .text {
+      position: relative;
       background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
       -webkit-background-clip: text;
               background-clip: text;
