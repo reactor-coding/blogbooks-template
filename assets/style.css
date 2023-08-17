@@ -1,8 +1,3 @@
-/**
-  nest非対応ブラウザにも対応させるため Sassコンパイルしました。
-  https://www.sassmeister.com/
- */
-
 @charset "UTF-8";
 /* 
   初期設定
@@ -134,12 +129,19 @@ main .info .text {
   margin: 5px;
 }
 main .info .mainvisual {
+  box-shadow: -10px 10px 25px #fff;
   position: absolute;
   z-index: 0;
   width: auto;
   top: calc(var(--default-padding-height) * 5);
   left: auto;
   right: -400px;
+  /* 
+    border-radiusが効かない場合の原因と対処法を解説！
+    https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
+   */
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 footer {
