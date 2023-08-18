@@ -15,6 +15,9 @@
   --default-button-color: #505050;
   --hover-button-color: #fff;
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   /* background: url(https://blogbooks.net/wp-content/uploads/2023/07/cropped-nong-qwvv5QD0It0-unsplash.jpg); */
