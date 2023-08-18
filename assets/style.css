@@ -15,6 +15,10 @@
 }
 
 html {
+  /* 
+    iOS で body に設定した overflow: hidden が効かないとき
+    https://illustswitch.com/blog/ios-overflow-hidden/
+   */
   overflow-x: hidden;
 }
 
