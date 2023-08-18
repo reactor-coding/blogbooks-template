@@ -18,8 +18,7 @@
 
 body {
   /* background: url(https://blogbooks.net/wp-content/uploads/2023/07/cropped-nong-qwvv5QD0It0-unsplash.jpg); */
-  background:         linear-gradient(var(--background-color));
-  background: -webkit-linear-gradient(var(--background-color));
+  background:         linear-gradient(var(--background-color)), -webkit-linear-gradient(var(--background-color));
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -148,7 +147,7 @@ main {
       width: auto;
       top: calc(var(--default-padding-height) * 5);
       left: 50vw;
-      right: -50vw;
+      right: -30vw;
       /* 
         border-radiusが効かない場合の原因と対処法を解説！
         https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
