@@ -143,10 +143,10 @@ main .info .mainvisual {
   position: absolute;
   z-index: -1;
   height: 90vh;
-  width: calc(90vh * 2);
+  width: calc(90vh * 1.6);
   top: calc(var(--default-padding-height) * 5);
   left: 50vw;
-  right: calc(90vh * 2 - 50vw);
+  right: calc(90vh * 1.6 - 50vw);
   /* 
     border-radiusが効かない場合の原因と対処法を解説！
     https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
