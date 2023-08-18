@@ -196,9 +196,14 @@ footer {
     margin: 10px;
 
     .box {
-      padding: 5px;
+      padding: 15px;
       border-radius: 5px;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.5);
+
+      .title, .text {
+        -webkit-text-fill-color: #fff;
+        color: #fff;
+      }
 
       .text br {
         display: none;
