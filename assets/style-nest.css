@@ -76,14 +76,6 @@ img, i.bx {
   -ms-user-select: none;      /* Microsoft */
 }
 
-div.gradation {
-  background:         linear-gradient(var(--logo-color));
-  background: -webkit-linear-gradient(var(--logo-color));
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* 
   ページごとの設定
   - nextjs でここから上のスタイルだけ globals.css に入れておく
@@ -168,6 +160,12 @@ main {
         width: 100%;
       }
     }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    color: rgb(55, 55, 55);
   }
 }
 
