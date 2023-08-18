@@ -142,7 +142,7 @@ main .info .mainvisual {
   box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: -1;
-  height: 95vh;
+  height: 90vh;
   width: calc(90vh * 1.6);
   top: calc(var(--default-padding-height) * 5);
   left: 50vw;
@@ -156,7 +156,7 @@ main .info .mainvisual {
 }
 main .info .mainvisual img {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
 }
 
 footer {
