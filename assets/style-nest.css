@@ -195,8 +195,14 @@ footer {
   main .info {
     margin: 10px;
 
-    .text br {
-      display: none;
+    .box {
+      padding: 5px;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.2);
+
+      .text br {
+        display: none;
+      }
     }
 
     .mainvisual {

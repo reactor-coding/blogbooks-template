@@ -156,7 +156,7 @@ main .info .mainvisual {
 }
 main .info .mainvisual img {
   height: 100%;
-  /* width: 100%; */
+  width: 100%;
 }
 
 footer {
@@ -181,7 +181,12 @@ footer .copyright {
   main .info {
     margin: 10px;
   }
-  main .info .text br {
+  main .info .box {
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  main .info .box .text br {
     display: none;
   }
   main .info .mainvisual {
