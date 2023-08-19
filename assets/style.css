@@ -38,7 +38,6 @@ body {
   position: relative;
   overflow-x: hidden;
   font-size: 15px;
-  scroll-behavior: smooth;
 }
 
 img, i.bx {
