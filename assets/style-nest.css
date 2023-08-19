@@ -14,6 +14,7 @@
   --background-color: 229deg, rgba(255, 255, 255, 1), rgba(134, 134, 134, 1);
   --default-button-color: #505050;
   --hover-button-color: #fff;
+  --content-text-color: rgb(90, 90, 90);
 }
 html {
   /* 
@@ -162,9 +163,59 @@ main {
     }
   }
 
-  .content {
-    margin: auto 40px;
-    color: rgb(90, 90, 90);
+  .content { /* 投稿リスト */
+    margin: auto 50px; /* スマホ: 50px -> 10px */
+    color: var(--content-text-color);
+
+    /* float解除 */
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .left {
+      display: block;
+      float: left;
+      width: 100px;
+      height: 100px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .right {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      float: right;
+
+      .title { /* タイトル: 「投稿 / Articles」 */
+
+      }
+  
+      .list { /* リスト */
+        width: 50vw; /* 画面の横幅の50% */
+        margin: 20px;
+        border-left: 1px solid #000;
+  
+        .article { /* 投稿 */
+          padding: 10px;
+          cursor: pointer;
+          margin: 10px;
+  
+          .post-title { /* 投稿のタイトル */
+            font-size: larger;
+            font-weight: bold;
+          }
+  
+          .post-description { /* 投稿の説明 */
+  
+          }
+        }
+      }
+    }
   }
 }
 
@@ -189,27 +240,33 @@ footer {
 }
 
 @media screen and (max-width: 960px) {
-  main .info {
-    margin: 10px;
+  main{
+    .info {
+      margin: 10px;
 
-    .box {
-      padding: 15px;
-      border-radius: 5px;
-      background: rgba(0, 0, 0, 0.5);
+      .box {
+        padding: 15px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.5);
 
-      .title, .text {
-        -webkit-text-fill-color: #fff;
-        color: #fff;
+        .title, .text {
+          -webkit-text-fill-color: #fff;
+          color: #fff;
+        }
+
+        .text br {
+          display: none;
+        }
       }
 
-      .text br {
-        display: none;
+      .mainvisual {
+        left: 10vh;
+        /* display: none; */
       }
     }
 
-    .mainvisual {
-      left: 10vh;
-      /* display: none; */
+    .content {
+      margin: 10px;
     }
   }
 }
