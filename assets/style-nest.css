@@ -15,7 +15,15 @@
   --default-button-color: #505050;
   --hover-button-color: #fff;
 }
+
 html {
+  /* 
+    ［CSS］iOS（iPhone）でスクロールがガタガタする時の対処法 
+     https://webcreatetips.com/coding/13/ 
+   */ 
+  overflow: scroll; 
+  -webkit-overflow-scrolling: touch;
+
   /* 
     iOS で body に設定した overflow: hidden が効かないとき
     https://illustswitch.com/blog/ios-overflow-hidden/
