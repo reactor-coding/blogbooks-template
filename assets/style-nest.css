@@ -171,9 +171,11 @@ main {
   }
 
   .content {
-    display: flex;
-    justify-content: center;
-    color: rgb(55, 55, 55);
+    margin: auto 40px;
+    color: rgb(90, 90, 90);
+
+    .title {
+    }
   }
 }
 
