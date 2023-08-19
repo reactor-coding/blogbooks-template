@@ -16,6 +16,7 @@
 
 html {
   will-change: transform;
+  -webkit-overflow-scrolling: touch;
   
   /* 
     iOS で body に設定した overflow: hidden が効かないとき
