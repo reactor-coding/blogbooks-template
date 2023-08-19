@@ -15,7 +15,6 @@
   --default-button-color: #505050;
   --hover-button-color: #fff;
 }
-
 html {
   /* 
     iOS で body に設定した overflow: hidden が効かないとき
