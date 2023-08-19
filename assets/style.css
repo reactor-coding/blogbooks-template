@@ -15,13 +15,6 @@
 }
 
 html {
-  /*
-    ［CSS］iOS（iPhone）でスクロールがガタガタする時の対処法
-    https://webcreatetips.com/coding/13/
-   */
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-  
   will-change: transform;
   
   /* 
