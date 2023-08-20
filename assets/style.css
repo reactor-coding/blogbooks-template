@@ -113,7 +113,7 @@ main .info {
   height: calc(100vh - 10vh - var(--default-padding-height));
   display: grid;
   grid-template-columns: 10vw 30vw 50vw;
-  grid-template-rows: 40vh 20vh 35vh;
+  grid-template-rows: 30vh 20vh 45vh;
 }
 main .info .box {
   grid-column: 2;
