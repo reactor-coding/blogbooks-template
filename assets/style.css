@@ -13,6 +13,7 @@
   --default-button-color: #505050;
   --hover-button-color: #fff;
   --content-text-color: rgb(90, 90, 90);
+  --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -60,6 +61,7 @@ img, i.bx {
   border: 1px solid #fff; */
   color: var(--default-button-color);
 }
+
 .button i.bx {
   font-size: x-large;
 }
@@ -87,11 +89,13 @@ header {
   /* Logo - 左寄せ */
   /* menu icon - 右寄せ */
 }
+
 header::after {
   content: "";
   display: block;
   clear: both;
 }
+
 header .logo {
   float: left;
   background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
@@ -99,6 +103,7 @@ header .logo {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 header .menu {
   float: right;
   padding: 0;
@@ -108,6 +113,7 @@ header .menu {
 main {
   padding: var(--default-padding-height) var(--default-padding-width);
 }
+
 main .info {
   display: flex;
   flex-direction: column;
@@ -115,6 +121,7 @@ main .info {
   margin: auto 40px;
   height: calc(100vh - 10vh - var(--default-padding-height));
 }
+
 main .info .title {
   position: relative;
   background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
@@ -123,6 +130,7 @@ main .info .title {
   -webkit-text-fill-color: transparent;
   font-size: xx-large;
 }
+
 main .info .text {
   position: relative;
   background: linear-gradient(var(--logo-color)), -webkit-linear-gradient(var(--logo-color));
@@ -131,8 +139,9 @@ main .info .text {
   -webkit-text-fill-color: transparent;
   margin: 5px;
 }
+
 main .info .mainvisual {
-  box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: -10px 10px 25px #fff, 10px -10px 25px var(--shadow-color);
   position: absolute;
   z-index: -1;
   height: 90vh;
@@ -147,10 +156,12 @@ main .info .mainvisual {
   overflow: hidden;
   border-radius: 10px;
 }
+
 main .info .mainvisual img {
   height: 100%;
   width: 100%;
 }
+
 main .content {
   /* 投稿リスト */
   margin: auto 50px;
@@ -160,43 +171,55 @@ main .content {
   grid-template-columns: 35vw 45vw;
   color: var(--content-text-color);
 }
+
 main .content .left {
   grid-column: 1;
   display: block;
   height: calc(45vh + 20px);
+  box-shadow: -10px 10px 25px var(--shadow-color), 10px -10px 25px var(--shadow-color);
   border-radius: 10px;
+  /* 
+    border-radiusが効かない場合の原因と対処法を解説！
+    https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
+   */
   overflow: hidden;
-  box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5);
 }
+
 main .content .left img {
   width: 100%;
   height: 100%;
 }
+
 main .content .right {
   margin-left: 50px;
   grid-column: 2;
   height: 50vh;
   /* 画面の横幅の50% */
 }
+
 main .content .right .title {
   /* タイトル: 「投稿 / Articles」 */
 }
+
 main .content .right .list {
   /* リスト */
   margin: 20px;
   border-left: 1px solid #000;
 }
+
 main .content .right .list .article {
   /* 投稿 */
   padding: 10px;
   cursor: pointer;
   margin: 10px;
 }
+
 main .content .right .list .article .post-title {
   /* 投稿のタイトル */
   font-size: larger;
   font-weight: bold;
 }
+
 main .content .right .list .article .post-description {
   /* 投稿の説明 */
 }
@@ -207,14 +230,17 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 footer .sns {
   display: flex;
   list-style: none;
   font-size: xx-large;
 }
+
 footer .sns > li {
   padding: 5px;
 }
+
 footer .copyright {
   margin: 0 0 0 auto;
 }
@@ -223,28 +249,35 @@ footer .copyright {
   main .info {
     margin: 10px;
   }
+
   main .info .box {
     padding: 15px;
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--shadow-color);
   }
+
   main .info .box .title, main .info .box .text {
     -webkit-text-fill-color: #fff;
     color: #fff;
   }
+
   main .info .box .text br {
     display: none;
   }
+
   main .info .mainvisual {
     left: 10vh;
     /* display: none; */
   }
+
   main .content {
     margin: 10px;
   }
+
   main .content .left, main .content .right {
     float: none;
   }
+
   main .content .right {
     margin-left: 20px;
   }

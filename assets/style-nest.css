@@ -15,6 +15,7 @@
   --default-button-color: #505050;
   --hover-button-color: #fff;
   --content-text-color: rgb(90, 90, 90);
+  --shadow-color: rgba(0, 0, 0, 0.5);
 }
 html {
   /* 
@@ -141,7 +142,7 @@ main {
     }
 
     .mainvisual {
-      box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5) /* rgba(0, 0, 0, 0.3) */;
+      box-shadow: -10px 10px 25px #fff, 10px -10px 25px var(--shadow-color) /* rgba(0, 0, 0, 0.3) */;
       position: absolute;
       z-index: -1;
       height: 90vh;
@@ -174,10 +175,15 @@ main {
       grid-column: 1;
       display: block;
       height: calc(45vh + 20px);
-      box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5);
+      box-shadow: -10px 10px 25px var(--shadow-color), 10px -10px 25px var(--shadow-color);
+      border-radius: 10px;
+      /* 
+        border-radiusが効かない場合の原因と対処法を解説！
+        https://qumeru.com/magazine/51#head-a3b622a62d53af3115f2a00290ac6f70
+       */
+       overflow: hidden;
 
       img {
-        border-radius: 10px;
         width: 100%;
         height: 100%;
       }
@@ -243,7 +249,7 @@ footer {
       .box {
         padding: 15px;
         border-radius: 5px;
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--shadow-color);
 
         .title, .text {
           -webkit-text-fill-color: #fff;
