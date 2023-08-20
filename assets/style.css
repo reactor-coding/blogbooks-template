@@ -156,17 +156,13 @@ main .content {
   margin: auto 50px;
   /* スマホ: 50px -> 10px */
   margin-top: 50px;
+  display: grid;
+  grid-template-columns: 35vw 45vw;
   color: var(--content-text-color);
-  /* float解除 */
-}
-main .content::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 main .content .left {
+  grid-column: 1;
   display: block;
-  float: left;
   height: calc(45vh + 20px);
 }
 main .content .left img {
@@ -174,10 +170,10 @@ main .content .left img {
   height: 100%;
 }
 main .content .right {
+  margin-left: 50px;
+  grid-column: 2;
   height: 50vh;
-  width: 45vw;
   /* 画面の横幅の50% */
-  float: right;
 }
 main .content .right .title {
   /* タイトル: 「投稿 / Articles」 */

@@ -166,18 +166,13 @@ main {
   .content { /* 投稿リスト */
     margin: auto 50px; /* スマホ: 50px -> 10px */
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: 35vw 45vw;
     color: var(--content-text-color);
 
-    /* float解除 */
-    &::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-
     .left {
+      grid-column: 1;
       display: block;
-      float: left;
       height: calc(45vh + 20px);
 
       img {
@@ -187,9 +182,9 @@ main {
     }
 
     .right {
-      height: 50vh;
-      width: 45vw; /* 画面の横幅の50% */
-      float: right;
+      margin-left: 50px;
+      grid-column: 2;
+      height: 50vh;/* 画面の横幅の50% */
 
       .title { /* タイトル: 「投稿 / Articles」 */
 
