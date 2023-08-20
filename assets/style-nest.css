@@ -174,8 +174,10 @@ main {
       grid-column: 1;
       display: block;
       height: calc(45vh + 20px);
+      box-shadow: -10px 10px 25px #fff, 10px -10px 25px rgba(0, 0, 0, 0.5);
 
       img {
+        border-radius: 10px;
         width: 100%;
         height: 100%;
       }
